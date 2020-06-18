@@ -1,0 +1,36 @@
+﻿
+
+@using (Html.BeginForm("PostNotification", "api/Values", FormMethod.Post))
+{
+    <div class="jumbotron">
+        <p class="lead">Отправка web push уведомления<br/>POST api/Values/PostNotification</p>
+        <div class="form-group row">
+            key
+            @Html.TextBox("Token", "", new { @class = "form-control" })
+        </div>
+        <div class="form-group row">
+            body
+            @Html.TextBox("Body", "", new { @class = "form-control" })
+        </div>
+        <div class="form-group row">
+            title
+            @Html.TextBox("Title", "", new { @class = "form-control" })
+        </div>
+        <div class="form-group row">
+            icon
+            @Html.TextBox("Icon", "", new { @class = "form-control" })
+        </div>
+        <div class="form-group row">
+            imgae src
+            @Html.TextBox("Image", "", new { @class = "form-control" })
+        </div>
+        <div class="form-group row">
+            url action
+            @Html.TextBox("Url", "", new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Отправить</button>
+        </div>
+
+    </div>
+}
